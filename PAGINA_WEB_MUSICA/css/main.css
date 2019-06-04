@@ -1,0 +1,170 @@
+/*!
+* Theme Name: Fabulo
+* Framework Type: Materialize Css
+* Template by www.uigrid.com 
+* Email: help@uigrid.com 
+* Made with Love <3
+*/
+
+/* Box Model */
+html { 
+	box-sizing: border-box; 
+}
+*, *:before, *:after { 
+	box-sizing: inherit; 
+}
+
+body{
+	margin: 0px;
+	padding: 0px;
+	color: #444444;
+	line-height: 1.6;
+	font-smooth: always;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+}
+
+
+/* ==========================================================================
+  Reusable styles
+========================================================================== */
+section{
+	width: 100%;
+	height: auto;
+	padding: 80px 0px;
+	position: relative;
+	overflow: hidden;
+	background-color: #fff;
+}
+
+.content_box{
+	margin-bottom: 30px;
+}
+
+/* ==========================================================================
+   Author's custom styles
+========================================================================== */
+#wrapper{
+	width: 100%;
+	max-width: 1600px;
+	height: auto;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+}
+
+.container_wrap{
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+
+/* ==========================================================================
+   Cover Styles
+========================================================================== */
+.parallax-container{height: auto;}
+
+.cover{
+	padding: 120px 0px;
+	position: relative;
+	overflow: hidden;
+}
+
+.cover_title{
+	font-size: 3.5em;
+	color: #fff;
+	margin-bottom: 0px;
+	text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+	text-transform: uppercase;
+}
+
+
+/* ==========================================================================
+   Features section styles
+========================================================================== */
+.feature_wrap{
+	width: 50%;
+	float: left;
+	padding: 100px 25px;
+	position: relative;
+	overflow: hidden;
+	min-height: 450px;
+	color: #fff;
+}
+.feature_title{
+	font-size: 3em;
+	text-transform: uppercase;
+}
+
+.feature_image{	
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.feature_one{background-image: url(../images/feature_one.jpg);}
+.feature_two{background-image: url(../images/feature_two.jpg);}
+.feature_three{background-image: url(../images/feature_three.jpg);}
+.feature_four{background-image: url(../images/feature_four.jpg);}
+
+
+
+/* ==========================================================================
+   Content features styles
+========================================================================== */
+.content_wrap{
+	width: 25%;
+	float: left;
+	padding: 60px 25px;
+	position: relative;
+	overflow: hidden;
+}
+
+.content_ico{
+	width: 80px;
+	height: 80px;
+	border-radius: 100%;
+	background-color: rgba(0,0,0,0.2);
+	color: #fff;
+	margin: auto;
+	line-height: 90px;
+}
+
+
+/* ==========================================================================
+   Footer styles
+========================================================================== */
+footer{
+	width: 100%;
+	height: auto;
+	padding: 30px 0px;
+	position: relative;
+	overflow: hidden;
+}
+.copyright{
+	padding: 10px 0px;
+	text-align: center;
+	background-color: #111;
+	color: #666;
+}
+.copyright_link{
+	color: #999;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 1px;
+}
+
+
+
+/* ==========================================================================
+   Mobile styles
+========================================================================== */
+@media (max-width: 767px){
+	
+	.cover{padding: 40px 0px;}
+	.cover_title{font-size: 2.5em;}
+
+
+	.feature_wrap{width: 100%; padding: 60px 25px;min-height: 400px;}
+
+	.content_wrap{width: 100%;}
+
+}
