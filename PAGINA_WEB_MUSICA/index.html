@@ -15,15 +15,7 @@
   <link rel="stylesheet" href="css/estilo1.css">
   <!-- Normalize Css -->
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
-  <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
-  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-database.js"></script>
-  <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#config-web-app -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 
 </head>
 
@@ -74,9 +66,9 @@
             </h5>
           </div>
           <div class="row">
-            <a href="#" id="download-button" class="btn-large waves-effect waves-light amber lighten-1">
+            <button onclick="ingresarGoogle()">
               Registrate
-            </a>
+            </button>
           </div>
 
         </div>
@@ -367,10 +359,40 @@
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
   <script src="js/main.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-messaging.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-functions.js"></script>
+  <script src="js/script1.js"></script>
 
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
   <script>
-    // Enter Here
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyBTGMQXY1qvq9Cj9i2cZdJBB0Iju8fQG6Q",
+      authDomain: "eva2-e3377.firebaseapp.com",
+      databaseURL: "https://eva2-e3377.firebaseio.com",
+      projectId: "eva2-e3377",
+      storageBucket: "eva2-e3377.appspot.com",
+      messagingSenderId: "627694571986",
+      appId: "1:627694571986:web:1116fbee98dd6fa9"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);  
+
+    ingresarGoogle=()=>{
+      var provider = new firebase.auth.GoogleAuthProvider();
+      firebase.auth().signInWithPopup(provider).then(function(result){
+        console.log(result);
+        console.log("Exito");
+      }).catch(function(err){
+        console.log(err);
+        console.log("Error");
+      })
+    }
+
   </script>
 
 </body>
