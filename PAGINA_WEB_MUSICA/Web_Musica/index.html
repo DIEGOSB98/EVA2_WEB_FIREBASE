@@ -66,8 +66,10 @@
             </h5>
           </div>
           <div class="row">
-            <button onclick="ingresarGoogle()" id="boton_registro">
-              Registrate
+            <button style="background-color: #FFC318" onclick="ingresarGoogle()" class="btn waves-effect waves-light" type="submit" name="action">
+              <strong>Ingreso</strong>
+              <i class="material-icons right"><img width="20px" height="20px"
+                  src="https://firebasestorage.googleapis.com/v0/b/eva2-e3377.appspot.com/o/icons8-logo-de-google-48.png?alt=media&token=60a84264-60ce-4af4-90d3-ba4e09ca5efe"></i>
             </button>
           </div>
 
@@ -380,19 +382,19 @@
       appId: "1:627694571986:web:1116fbee98dd6fa9"
     };
     // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);  
-
-    ingresarGoogle=()=>{
+    firebase.initializeApp(firebaseConfig);
+    ingresarGoogle = () => {
       var provider = new firebase.auth.GoogleAuthProvider();
-      firebase.auth().signInWithPopup(provider).then(function(result){
-        console.log(result);
-        console.log("Exito");
-      }).catch(function(err){
-        console.log(err);
-        console.log("Error");
+      firebase.auth().signInWithPopup(provider).then(function (result) {
+        
+        location.href="registro.html"
+
+      }).catch(function (err) {
+
+        alert("error al autentificar tus credenciales.");
+      
       })
     }
-
   </script>
 
 </body>
