@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Menu</title>
+</head>
+
+<body>
+
+    <button onclick="cerrar_sesion()">Cerrar sesion.</button>
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-functions.js"></script>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyBTGMQXY1qvq9Cj9i2cZdJBB0Iju8fQG6Q",
+            authDomain: "eva2-e3377.firebaseapp.com",
+            databaseURL: "https://eva2-e3377.firebaseio.com",
+            projectId: "eva2-e3377",
+            storageBucket: "eva2-e3377.appspot.com",
+            messagingSenderId: "627694571986",
+            appId: "1:627694571986:web:1116fbee98dd6fa9"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        cerrar_sesion = () => {
+            firebase.auth().signOut().then(function () {
+                console.log("sesion cerra con exito ...");
+            }).catch(function (error) {
+                console.log("error al cerrar sesion ...");
+            });
+        }
+    </script>
+
+</body>
+
+</html>

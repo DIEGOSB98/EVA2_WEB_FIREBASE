@@ -383,12 +383,11 @@
     };
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
+
     ingresarGoogle = () => {
       var provider = new firebase.auth.GoogleAuthProvider();
       firebase.auth().signInWithPopup(provider).then(function (result) {
-        
-        location.href="registro.html"
-
+        location.href="menu.html"
       }).catch(function (err) {
 
         alert("error al autentificar tus credenciales.");
