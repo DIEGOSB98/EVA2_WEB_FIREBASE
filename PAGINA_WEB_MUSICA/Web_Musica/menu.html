@@ -2,46 +2,349 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Menu</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+  <title>DSB Menu</title>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+  <!-- Framework Style -->
+  <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
+  <!-- Main Css -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/estilo1.css">
+  <!-- Normalize Css -->
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <script src="js/script1.js"></script>
 </head>
 
 <body>
 
-    <button onclick="cerrar_sesion()">Cerrar sesion.</button>
+  <!-- Top Navbar -->
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper amber">
 
-    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-messaging.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-functions.js"></script>
+        <div class="container_wrap">
+          <a href="#!" class="brand-logo">
+            DSB
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/eva2-e3377.appspot.com/o/icons8-musical-notes-48.png?alt=media&token=4240fd54-8d74-4f28-bb29-295059291a8e">
+          </a>
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Música</a></li>
+            <li><a href="#">Sobre nosotros</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-            apiKey: "AIzaSyBTGMQXY1qvq9Cj9i2cZdJBB0Iju8fQG6Q",
-            authDomain: "eva2-e3377.firebaseapp.com",
-            databaseURL: "https://eva2-e3377.firebaseio.com",
-            projectId: "eva2-e3377",
-            storageBucket: "eva2-e3377.appspot.com",
-            messagingSenderId: "627694571986",
-            appId: "1:627694571986:web:1116fbee98dd6fa9"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
+  <!-- Mobile Navigation -->
+  <ul class="side-nav" id="mobile-demo">
+    <li><a href="#">Inicio</a></li>
+    <li><a href="#">Música</a></li>
+    <li><a href="#">Sobre nosotros</a></li>
+  </ul>
+  <!-- Navbar Ends -->
 
-        cerrar_sesion = () => {
-            firebase.auth().signOut().then(function () {
-                console.log("sesion cerra con exito ...");
-            }).catch(function (error) {
-                console.log("error al cerrar sesion ...");
-            });
-        }
-    </script>
+  <!-- Main Wrapper content -->
+  <div id="wrapper">
+
+    <!-- Contenido Artistas -->
+    <section>
+      <div class="container_wrap">
+        <div class="row">
+          <div class="col s12 m3">
+            <div class="row">
+              <div class="col s12 m7">
+                <div class="card" id="contenedor">
+                  <div class="card-image">
+                    <img width="300px" height="300px"
+                      src="https://firebasestorage.googleapis.com/v0/b/eva2-e3377.appspot.com/o/Artistas%2Fmartin_garrix.jpg?alt=media&token=7b15c59e-ee40-48ed-993a-b08cac01b218">
+                    <span class="card-title"><strong id="nombre_artista">Martin Garrix</strong></span>
+                  </div>
+                  <div class="card-content">
+                    <div class="card-content" id="contenido">
+                      <img style="margin-left: 30px;" width="40px" height="40px"
+                        src="https://firebasestorage.googleapis.com/v0/b/eva2-e3377.appspot.com/o/iconos%2Ficonfinder_spotify_287525.png?alt=media&token=19c1b7ea-7974-468c-9d10-234e9c6a9202">
+                      <img style="margin-right: 30px;" width="40px" height="40px"
+                        src="https://firebasestorage.googleapis.com/v0/b/eva2-e3377.appspot.com/o/iconos%2Ficonfinder_soundcloud_386707.png?alt=media&token=4f11bd98-7d6a-4c47-8548-b85fd0e9afb1">
+                    </div>
+                  </div>
+                  <div class="card-action">
+                    <a href="#">Ver Artista</a>
+                    <button id="boton_artista" onclick="agregarArtista()" class="btn waves-effect waves-light" type="button" value="Martin Garrix">Votar
+                      <i class="material-icons right">send</i>
+                    </button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s12 m3">
+            <div class="row">
+              <div class="col s12 m7">
+                <div class="card" id="contenedor">
+                  <div class="card-image">
+                    <img width="300px" height="300px"
+                      src="https://firebasestorage.googleapis.com/v0/b/eva2-e3377.appspot.com/o/Artistas%2FCtktk8xWAAAwlyM.jpg?alt=media&token=469e94ef-4427-4b1c-a2b7-e56bbd8aee45">
+                    <span class="card-title"><strong id="nombre_artista">The Weeknd</strong></span>
+                  </div>
+                  <div class="card-content">
+                    <div class="card-content" id="contenido">
+                      <img style="margin-left: 30px;" width="40px" height="40px"
+                        src="https://firebasestorage.googleapis.com/v0/b/eva2-e3377.appspot.com/o/iconos%2Ficonfinder_spotify_287525.png?alt=media&token=19c1b7ea-7974-468c-9d10-234e9c6a9202">
+                      <img style="margin-right: 30px;" width="40px" height="40px"
+                        src="https://firebasestorage.googleapis.com/v0/b/eva2-e3377.appspot.com/o/iconos%2Ficonfinder_soundcloud_386707.png?alt=media&token=4f11bd98-7d6a-4c47-8548-b85fd0e9afb1">
+                    </div>
+                  </div>
+                  <div class="card-action">
+                    <a href="#">Ver Artista</a>
+                    <button id="boton_artista" class="btn waves-effect waves-light" type="submit" name="action">Votar
+                      <i class="material-icons right">send</i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s12 m3">
+            <div class="row">
+              <div class="col s12 m7">
+                <div class="card" id="contenedor">
+                  <div class="card-image">
+                    <img
+                      src="https://firebasestorage.googleapis.com/v0/b/eva2-e3377.appspot.com/o/Artistas%2F3344e8e08b3baacf9d711b92522c0067.jpg?alt=media&token=44730508-47f2-4c5f-b099-18ffd6229c38">
+                    <span class="card-title"><strong id="nombre_artista">Rihanna</strong></span>
+                  </div>
+                  <div class="card-content">
+                    <div class="card-content" id="contenido">
+                      <img style="margin-left: 30px;" width="40px" height="40px"
+                        src="https://firebasestorage.googleapis.com/v0/b/eva2-e3377.appspot.com/o/iconos%2Ficonfinder_spotify_287525.png?alt=media&token=19c1b7ea-7974-468c-9d10-234e9c6a9202">
+                      <img style="margin-right: 30px;" width="40px" height="40px"
+                        src="https://firebasestorage.googleapis.com/v0/b/eva2-e3377.appspot.com/o/iconos%2Ficonfinder_soundcloud_386707.png?alt=media&token=4f11bd98-7d6a-4c47-8548-b85fd0e9afb1">
+                    </div>
+                  </div>
+                  <div class="card-action">
+                    <a href="#">Ver Artista</a>
+                    <button id="boton_artista" class="btn waves-effect waves-light" type="submit" name="action">Votar
+                      <i class="material-icons right">send</i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s12 m3">
+            <div class="row">
+              <div class="col s12 m7">
+                <div class="card" id="contenedor">
+                  <div class="card-image">
+                    <img
+                      src="https://firebasestorage.googleapis.com/v0/b/eva2-e3377.appspot.com/o/Artistas%2FDEmSXRIVwAAJHa8.jpg?alt=media&token=04571483-35e9-4930-9e22-2aca7e01fc4f">
+                    <span class="card-title"><strong id="nombre_artista">Wiz Khalifa</strong></span>
+                  </div>
+                  <div class="card-content">
+                    <div class="card-content" id="contenido">
+                      <img style="margin-left: 30px;" width="40px" height="40px"
+                        src="https://firebasestorage.googleapis.com/v0/b/eva2-e3377.appspot.com/o/iconos%2Ficonfinder_spotify_287525.png?alt=media&token=19c1b7ea-7974-468c-9d10-234e9c6a9202">
+                      <img style="margin-right: 30px;" width="40px" height="40px"
+                        src="https://firebasestorage.googleapis.com/v0/b/eva2-e3377.appspot.com/o/iconos%2Ficonfinder_soundcloud_386707.png?alt=media&token=4f11bd98-7d6a-4c47-8548-b85fd0e9afb1">
+                    </div>
+                  </div>
+                  <div class="card-action">
+                    <a href="#">Ver Artista</a>
+                    <button id="boton_artista" class="btn waves-effect waves-light" type="submit" name="action">Votar
+                      <i class="material-icons right">send</i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="container_wrap">
+        <div class="row">
+          <div class="col s12 m3">
+            <div class="row">
+              <div class="col s12 m7">
+                <div class="card" id="contenedor">
+                  <div class="card-image">
+                    <img
+                      src="https://firebasestorage.googleapis.com/v0/b/eva2-e3377.appspot.com/o/Artistas%2FMetallica-Live-the-night-before.jpg?alt=media&token=ede1a48d-eae3-42a1-a255-a48e9c72a2f2">
+                    <span class="card-title"><strong id="nombre_artista">Metallica</strong></span>
+                  </div>
+                  <div class="card-content">
+                    <div class="card-content" id="contenido">
+                      <img style="margin-left: 30px;" width="40px" height="40px"
+                        src="https://firebasestorage.googleapis.com/v0/b/eva2-e3377.appspot.com/o/iconos%2Ficonfinder_spotify_287525.png?alt=media&token=19c1b7ea-7974-468c-9d10-234e9c6a9202">
+                      <img style="margin-right: 30px;" width="40px" height="40px"
+                        src="https://firebasestorage.googleapis.com/v0/b/eva2-e3377.appspot.com/o/iconos%2Ficonfinder_soundcloud_386707.png?alt=media&token=4f11bd98-7d6a-4c47-8548-b85fd0e9afb1">
+                    </div>
+                  </div>
+                  <div class="card-action">
+                    <a href="#">Ver Artista</a>
+                    <button id="boton_artista" class="btn waves-effect waves-light" type="submit" name="action">Votar
+                      <i class="material-icons right">send</i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+    <!-- Contenido Artistas -->
+    <!-- Content -->
+    <section>
+      <div class="container_wrap">
+        <div class="row">
+
+          <div class="col s12 center">
+            <h2>Lorem ipsum</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- Content -->
+
+
+    <!-- Buy now Cover -->
+    <div id="index-banner" class="parallax-container">
+      <div class="cover no-pad-bot">
+        <div class="container">
+
+          <h1 class="header cover_title">Check Our Shop</h1>
+          <div class="row">
+            <h5 class="header white-text col s12 light">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
+              Nullam scelerisque id nunc nec volutpat.</h5>
+          </div>
+          <div class="row">
+            <a href="#" id="download-button" class="btn-large waves-effect waves-light white amber-text">Visit Shop</a>
+          </div>
+
+        </div>
+      </div>
+      <div class="parallax"><img src="images/shop_cover.jpg" alt="Unsplashed background img 1"></div>
+    </div>
+    <!-- Buy now Cover -->
+
+    <!-- Content -->
+    <div class="feature_content">
+
+      <div class="content_wrap center amber">
+        <div class="content_ico center">
+          <i class="material-icons">done</i>
+        </div>
+        <h5>Lorem Ipsum</h5>
+        <p>We did most of the heavy lifting for you to provide a default stylings.</p>
+      </div>
+
+      <div class="content_wrap center amber lighten-1">
+        <div class="content_ico center">
+          <i class="material-icons">done</i>
+        </div>
+        <h5>Lorem Ipsum</h5>
+        <p>We did most of the heavy lifting for you to provide a default stylings.</p>
+      </div>
+
+      <div class="content_wrap center amber lighten-2">
+        <div class="content_ico center">
+          <i class="material-icons">done</i>
+        </div>
+        <h5>Lorem Ipsum</h5>
+        <p>We did most of the heavy lifting for you to provide a default stylings.</p>
+      </div>
+
+      <div class="content_wrap center amber lighten-3">
+        <div class="content_ico center">
+          <i class="material-icons">done</i>
+        </div>
+        <h5>Lorem Ipsum</h5>
+        <p>We did most of the heavy lifting for you to provide a default stylings.</p>
+      </div>
+
+    </div>
+    <!-- Content -->
+
+
+    <footer class="grey darken-4">
+      <div class="container_wrap">
+        <div class="row">
+
+          <div class="col l5 s12">
+            <h5 class="white-text">About Us</h5>
+            <p class="grey-text text-lighten-4">Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+              printer took a galley of type and scrambled it to make a type specimen book.
+              <br /><br />
+              Lorem Ipsum has been the industry's standard dummy text ever since
+            </p>
+          </div>
+
+          <div class="col l2 s6 m3">
+
+            <h5 class="white-text">Quick Links</h5>
+            <ul>
+              <li><a class="white-text" href="#">About Us</a></li>
+              <li><a class="white-text" href="#">Products</a></li>
+              <li><a class="white-text" href="#">Blog</a></li>
+              <li><a class="white-text" href="#">Media</a></li>
+              <li><a class="white-text" href="#">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="col l2 s6 m3">
+            <h5 class="white-text">Products</h5>
+            <ul>
+              <li><a class="white-text" href="#">Designers</a></li>
+              <li><a class="white-text" href="#">Clothing</a></li>
+              <li><a class="white-text" href="#">Asseccories</a></li>
+              <li><a class="white-text" href="#">Fashion trends</a></li>
+              <li><a class="white-text" href="#">Beauty products</a></li>
+            </ul>
+          </div>
+          <div class="col l2 s6 m3">
+            <h5 class="white-text">Social</h5>
+            <ul>
+              <li><a class="white-text" href="http://www.facebook.com/uigridcom" target="_blank">Facebook</a></li>
+              <li><a class="white-text" href="http://www.twitter.com/uigridcom" target="_blank">Twitter</a></li>
+              <li><a class="white-text" href="https://plus.google.com/+UiGridMarketplace" target="_blank">GooglePlus</a>
+              </li>
+              <li><a class="white-text" href="http://www.pinterest.com/uigrid" target="_blank">Pinterest</a></li>
+              <li><a class="white-text" href="#" target="_blank">Amazon</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </footer>
+    <div class="copyright">
+      <small>© 2017 | <a class="copyright_link" href="http://www.uigrid.com" target="_blank">UiGrid</a> Made with
+        Love</small>
+    </div>
+
+  </div>
+
+
+
 
 </body>
 
