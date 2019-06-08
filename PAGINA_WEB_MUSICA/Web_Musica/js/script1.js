@@ -12,7 +12,8 @@ function agregarArtista() {
 
     var artista=document.getElementById("boton_artista").value;
     var voto=1;
-    db.collection("artistas").add({
+
+    db.collection("artistas").set({
         first: artista,
         last: voto,
 
