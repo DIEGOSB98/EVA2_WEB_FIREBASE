@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+    <title>DSB Seugerir libros</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/estilo1.css">
+    <!-- Normalize Css -->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <script src="js/script1.js"></script>
+</head>
+
+<body>
+
+    <!-- Top Navbar -->
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper amber">
+
+                <div class="container_wrap">
+                    <a href="#!" class="brand-logo">
+                        DSB
+                        <img width="30px" height="30px"
+                            src="https://firebasestorage.googleapis.com/v0/b/eva2-e3377.appspot.com/o/iconos%2Flibro.png?alt=media&token=012e1ccf-5a56-4f91-bda4-35c13fc014c8">
+                    </a>
+                    <a href="#" data-activates="mobile-demo" class="button-collapse"><i
+                            class="material-icons">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Sobre nosotros</a></li>
+                        <li><a href="#">Sugerir libros</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>enviarDatos
+    </div>
+
+    <!-- MobilenviarDatos->
+    <ul class=enviarDatos"mobile-demo">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Música</a></li>
+        <li><a href="#">Sobre nosotros</a></li>
+    </ul>
+    <!-- Navbar Ends -->
+
+    <!-- Main Wrapper content -->
+    <div style="border:0 auto" id="wrapper">
+
+        <!-- Contenido Artistas -->
+        <section>
+
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input placeholder="Harry Potter" id="nom_lib" type="text" class="validate" required>
+                            <label for="nom_libro">Nombre Libro</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input placeholder="Lovcraft" id="autor" type="text" class="validate" required>
+                            <label for="autor">Autor</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input placeholder="1997" id="año" type="text" class="validate" required>
+                            <label for="año">Año</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input placeholder="Los Ravanos" id="editorial" type="text" class="validate" required>
+                            <label for="editorial">Editorial</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                            <div class="input-field col s12">
+                                <textarea required id="tematica" class="materialize-textarea"></textarea>
+                                <label for="textarea1">Explicanos la temática del libro</label>
+                            </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="email" type="email" class="validate">
+                            <label for="email">Su correo electronico</labe
+                        </div>
+                    </div>
+                    <div class="row" style="text-align: center">
+                        <button class="waves-effect waves-light btn" onclick="enviarDatos()">Enviar</button>
+                    </div>
+                </form>
+            </div>
+
+        </section>
+        <!-- Content -->
+
+
+        <!-- Buy now Cover -->
+        <div id="index-banner" class="parallax-container">
+            <div class="cover no-pad-bot">
+                <div class="container">
+
+                    <h1 class="header cover_title">Check Our Shop</h1>
+                    <div class="row">
+                        <h5 class="header white-text col s12 light">Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit.<br />
+                            Nullam scelerisque id nunc nec volutpat.</h5>
+                    </div>
+                    <div class="row">
+                        <a href="#" id="download-button"
+                            class="btn-large waves-effect waves-light white amber-text">Visit Shop</a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="parallax"><img src="images/shop_cover.jpg" alt="Unsplashed background img 1"></div>
+        </div>
+        <!-- Buy now Cover -->
+
+        <!-- Content -->
+        <div class="feature_content">
+
+            <div class="content_wrap center amber">
+                <div class="content_ico center">
+                    <i class="material-icons">done</i>
+                </div>
+                <h5>Lorem Ipsum</h5>
+                <p>We did most of the heavy lifting for you to provide a default stylings.</p>
+            </div>
+
+            <div class="content_wrap center amber lighten-1">
+                <div class="content_ico center">
+                    <i class="material-icons">done</i>
+                </div>
+                <h5>Lorem Ipsum</h5>
+                <p>We did most of the heavy lifting for you to provide a default stylings.</p>
+            </div>
+
+            <div class="content_wrap center amber lighten-2">
+                <div class="content_ico center">
+                    <i class="material-icons">done</i>
+                </div>
+                <h5>Lorem Ipsum</h5>
+                <p>We did most of the heavy lifting for you to provide a default stylings.</p>
+            </div>
+
+            <div class="content_wrap center amber lighten-3">
+                <div class="content_ico center">
+                    <i class="material-icons">done</i>
+                </div>
+                <h5>Lorem Ipsum</h5>
+                <p>We did most of the heavy lifting for you to provide a default stylings.</p>
+            </div>
+
+        </div>
+        <!-- Content -->
+
+
+        <footer class="grey darken-4">
+            <div class="container_wrap">
+                <div class="row">
+
+                    <div class="col l5 s12">
+                        <h5 class="white-text">About Us</h5>
+                        <p class="grey-text text-lighten-4">Lorem Ipsum is simply dummy text of the printing and
+                            typesetting
+                            industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
+                            an unknown
+                            printer took a galley of type and scrambled it to make a type specimen book.
+                            <br /><br />
+                            Lorem Ipsum has been the industry's standard dummy text ever since
+                        </p>
+                    </div>
+
+                    <div class="col l2 s6 m3">
+
+                        <h5 class="white-text">Quick Links</h5>
+                        <ul>
+                            <li><a class="white-text" href="#">About Us</a></li>
+                            <li><a class="white-text" href="#">Products</a></li>
+                            <li><a class="white-text" href="#">Blog</a></li>
+                            <li><a class="white-text" href="#">Media</a></li>
+                            <li><a class="white-text" href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col l2 s6 m3">
+                        <h5 class="white-text">Products</h5>
+                        <ul>
+                            <li><a class="white-text" href="#">Designers</a></li>
+                            <li><a class="white-text" href="#">Clothing</a></li>
+                            <li><a class="white-text" href="#">Asseccories</a></li>
+                            <li><a class="white-text" href="#">Fashion trends</a></li>
+                            <li><a class="white-text" href="#">Beauty products</a></li>
+                        </ul>
+                    </div>
+                    <div class="col l2 s6 m3">
+                        <h5 class="white-text">Social</h5>
+                        <ul>
+                            <li><a class="white-text" href="http://www.facebook.com/uigridcom"
+                                    target="_blank">Facebook</a></li>
+                            <li><a class="white-text" href="http://www.twitter.com/uigridcom"
+                                    target="_blank">Twitter</a></li>
+                            <li><a class="white-text" href="https://plus.google.com/+UiGridMarketplace"
+                                    target="_blank">GooglePlus</a>
+                            </li>
+                            <li><a class="white-text" href="http://www.pinterest.com/uigrid"
+                                    target="_blank">Pinterest</a></li>
+                            <li><a class="white-text" href="#" target="_blank">Amazon</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </footer>
+        <div class="copyright">
+            <small>© 2017 | <a class="copyright_link" href="http://www.uigrid.com" target="_blank">UiGrid</a> Made with
+                Love</small>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

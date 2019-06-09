@@ -9,14 +9,11 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
-  <!-- Framework Style -->
   <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
-  <!-- Main Css -->
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/estilo1.css">
-  <!-- Normalize Css -->
+
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
-  <script src="js/script1.js"></script>
 </head>
 
 <body>
@@ -36,6 +33,8 @@
           <ul class="right hide-on-med-and-down">
             <li><a href="#">Inicio</a></li>
             <li><a href="#">Sobre nosotros</a></li>
+            <li><a href="#">Sugerir libros</a></li>
+
           </ul>
         </div>
       </div>
@@ -73,9 +72,32 @@
                           style="margin-left: 30px;" width="40px" height="40px"
                           src="https://firebasestorage.googleapis.com/v0/b/eva2-e3377.appspot.com/o/iconos%2Ficono-pdf.png?alt=media&token=55427da5-28dd-451a-9e81-cdba761f6820">
                       </a>
-                      <a href="https://firebasestorage.googleapis.com/v0/b/eva2-e3377.appspot.com/o/libros%2FLa_sombra_sobre_Innsmouth-H._P._Lovecraft.pdf?alt=media&token=a78932f0-78c9-4634-b2f7-f8c427c6fdfa" download="Lovecraft">
-                        <img style="margin-right: 30px;" width="60px" height="40px"
-                          src="https://firebasestorage.googleapis.com/v0/b/eva2-e3377.appspot.com/o/iconos%2Ficono-descarga.png?alt=media&token=b413fd28-09c9-41a4-81f2-59498da49dcf">
+                    </div>
+                  </div>
+                  <div class="card-action">
+                    <a href="#">Ver Libro</a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s12 m3">
+            <div class="row">
+              <div class="col s12 m7">
+                <div class="card" id="contenedor">
+                  <div class="card-image">
+                    <img width="300px" height="300px"
+                      src="https://firebasestorage.googleapis.com/v0/b/eva2-e3377.appspot.com/o/libro-1.jpg?alt=media&token=7690f7e8-80dd-4516-98d6-ffb9a556eb75">
+                    <span class="card-title"><strong id="nombre_artista">Lovecraft</strong></span>
+                  </div>
+                  <div class="card-content">
+                    <div class="card-content" id="contenido">
+                      <a
+                        href="https://firebasestorage.googleapis.com/v0/b/eva2-e3377.appspot.com/o/libros%2FLa_sombra_sobre_Innsmouth-H._P._Lovecraft.pdf?alt=media&token=a78932f0-78c9-4634-b2f7-f8c427c6fdfa"><img
+                          style="margin-left: 30px;" width="40px" height="40px"
+                          src="https://firebasestorage.googleapis.com/v0/b/eva2-e3377.appspot.com/o/iconos%2Ficono-pdf.png?alt=media&token=55427da5-28dd-451a-9e81-cdba761f6820">
                       </a>
                     </div>
                   </div>
@@ -94,20 +116,22 @@
                 <div class="card" id="contenedor">
                   <div class="card-image">
                     <img width="300px" height="300px"
-                      src="https://firebasestorage.googleapis.com/v0/b/eva2-e3377.appspot.com/o/Artistas%2FCtktk8xWAAAwlyM.jpg?alt=media&token=469e94ef-4427-4b1c-a2b7-e56bbd8aee45">
-                    <span class="card-title"><strong id="nombre_artista">The Weeknd</strong></span>
+                      src="https://firebasestorage.googleapis.com/v0/b/eva2-e3377.appspot.com/o/libro-1.jpg?alt=media&token=7690f7e8-80dd-4516-98d6-ffb9a556eb75">
+                    <span class="card-title"><strong id="nombre_artista">Lovecraft</strong></span>
                   </div>
                   <div class="card-content">
                     <div class="card-content" id="contenido">
-                      <img style="margin-left: 30px;" width="40px" height="40px"
-                        src="https://firebasestorage.googleapis.com/v0/b/eva2-e3377.appspot.com/o/iconos%2Ficonfinder_spotify_287525.png?alt=media&token=19c1b7ea-7974-468c-9d10-234e9c6a9202">
-                      <img style="margin-right: 30px;" width="40px" height="40px"
-                        src="https://firebasestorage.googleapis.com/v0/b/eva2-e3377.appspot.com/o/iconos%2Ficonfinder_soundcloud_386707.png?alt=media&token=4f11bd98-7d6a-4c47-8548-b85fd0e9afb1">
+                      <a
+                        href="https://firebasestorage.googleapis.com/v0/b/eva2-e3377.appspot.com/o/libros%2FLa_sombra_sobre_Innsmouth-H._P._Lovecraft.pdf?alt=media&token=a78932f0-78c9-4634-b2f7-f8c427c6fdfa"><img
+                          style="margin-left: 30px;" width="40px" height="40px"
+                          src="https://firebasestorage.googleapis.com/v0/b/eva2-e3377.appspot.com/o/iconos%2Ficono-pdf.png?alt=media&token=55427da5-28dd-451a-9e81-cdba761f6820">
+                      </a>
                     </div>
                   </div>
                   <div class="card-action">
                     <a href="#">Ver Libro</a>
                   </div>
+
                 </div>
               </div>
             </div>
@@ -119,45 +143,22 @@
                 <div class="card" id="contenedor">
                   <div class="card-image">
                     <img width="300px" height="300px"
-                      src="https://firebasestorage.googleapis.com/v0/b/eva2-e3377.appspot.com/o/Artistas%2FCtktk8xWAAAwlyM.jpg?alt=media&token=469e94ef-4427-4b1c-a2b7-e56bbd8aee45">
-                    <span class="card-title"><strong id="nombre_artista">The Weeknd</strong></span>
+                      src="https://firebasestorage.googleapis.com/v0/b/eva2-e3377.appspot.com/o/libro-1.jpg?alt=media&token=7690f7e8-80dd-4516-98d6-ffb9a556eb75">
+                    <span class="card-title"><strong id="nombre_artista">Lovecraft</strong></span>
                   </div>
                   <div class="card-content">
                     <div class="card-content" id="contenido">
-                      <img style="margin-left: 30px;" width="40px" height="40px"
-                        src="https://firebasestorage.googleapis.com/v0/b/eva2-e3377.appspot.com/o/iconos%2Ficonfinder_spotify_287525.png?alt=media&token=19c1b7ea-7974-468c-9d10-234e9c6a9202">
-                      <img style="margin-right: 30px;" width="40px" height="40px"
-                        src="https://firebasestorage.googleapis.com/v0/b/eva2-e3377.appspot.com/o/iconos%2Ficonfinder_soundcloud_386707.png?alt=media&token=4f11bd98-7d6a-4c47-8548-b85fd0e9afb1">
+                      <a
+                        href="https://firebasestorage.googleapis.com/v0/b/eva2-e3377.appspot.com/o/libros%2FLa_sombra_sobre_Innsmouth-H._P._Lovecraft.pdf?alt=media&token=a78932f0-78c9-4634-b2f7-f8c427c6fdfa"><img
+                          style="margin-left: 30px;" width="40px" height="40px"
+                          src="https://firebasestorage.googleapis.com/v0/b/eva2-e3377.appspot.com/o/iconos%2Ficono-pdf.png?alt=media&token=55427da5-28dd-451a-9e81-cdba761f6820">
+                      </a>
                     </div>
                   </div>
                   <div class="card-action">
                     <a href="#">Ver Libro</a>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <div class="col s12 m3">
-            <div class="row">
-              <div class="col s12 m7">
-                <div class="card" id="contenedor">
-                  <div class="card-image">
-                    <img width="300px" height="300px"
-                      src="https://firebasestorage.googleapis.com/v0/b/eva2-e3377.appspot.com/o/Artistas%2FCtktk8xWAAAwlyM.jpg?alt=media&token=469e94ef-4427-4b1c-a2b7-e56bbd8aee45">
-                    <span class="card-title"><strong id="nombre_artista">The Weeknd</strong></span>
-                  </div>
-                  <div class="card-content">
-                    <div class="card-content" id="contenido">
-                      <img style="margin-left: 30px;" width="40px" height="40px"
-                        src="https://firebasestorage.googleapis.com/v0/b/eva2-e3377.appspot.com/o/iconos%2Ficonfinder_spotify_287525.png?alt=media&token=19c1b7ea-7974-468c-9d10-234e9c6a9202">
-                      <img style="margin-right: 30px;" width="40px" height="40px"
-                        src="https://firebasestorage.googleapis.com/v0/b/eva2-e3377.appspot.com/o/iconos%2Ficonfinder_soundcloud_386707.png?alt=media&token=4f11bd98-7d6a-4c47-8548-b85fd0e9afb1">
-                    </div>
-                  </div>
-                  <div class="card-action">
-                    <a href="#">Ver Libro</a>
-                  </div>
                 </div>
               </div>
             </div>
@@ -175,20 +176,22 @@
                 <div class="card" id="contenedor">
                   <div class="card-image">
                     <img width="300px" height="300px"
-                      src="https://firebasestorage.googleapis.com/v0/b/eva2-e3377.appspot.com/o/Artistas%2FCtktk8xWAAAwlyM.jpg?alt=media&token=469e94ef-4427-4b1c-a2b7-e56bbd8aee45">
-                    <span class="card-title"><strong id="nombre_artista">The Weeknd</strong></span>
+                      src="https://firebasestorage.googleapis.com/v0/b/eva2-e3377.appspot.com/o/libro-1.jpg?alt=media&token=7690f7e8-80dd-4516-98d6-ffb9a556eb75">
+                    <span class="card-title"><strong id="nombre_artista">Lovecraft</strong></span>
                   </div>
                   <div class="card-content">
                     <div class="card-content" id="contenido">
-                      <img style="margin-left: 30px;" width="40px" height="40px"
-                        src="https://firebasestorage.googleapis.com/v0/b/eva2-e3377.appspot.com/o/iconos%2Ficonfinder_spotify_287525.png?alt=media&token=19c1b7ea-7974-468c-9d10-234e9c6a9202">
-                      <img style="margin-right: 30px;" width="40px" height="40px"
-                        src="https://firebasestorage.googleapis.com/v0/b/eva2-e3377.appspot.com/o/iconos%2Ficonfinder_soundcloud_386707.png?alt=media&token=4f11bd98-7d6a-4c47-8548-b85fd0e9afb1">
+                      <a
+                        href="https://firebasestorage.googleapis.com/v0/b/eva2-e3377.appspot.com/o/libros%2FLa_sombra_sobre_Innsmouth-H._P._Lovecraft.pdf?alt=media&token=a78932f0-78c9-4634-b2f7-f8c427c6fdfa"><img
+                          style="margin-left: 30px;" width="40px" height="40px"
+                          src="https://firebasestorage.googleapis.com/v0/b/eva2-e3377.appspot.com/o/iconos%2Ficono-pdf.png?alt=media&token=55427da5-28dd-451a-9e81-cdba761f6820">
+                      </a>
                     </div>
                   </div>
                   <div class="card-action">
                     <a href="#">Ver Libro</a>
                   </div>
+
                 </div>
               </div>
             </div>
@@ -332,9 +335,6 @@
     </div>
 
   </div>
-
-
-
 
 </body>
 
