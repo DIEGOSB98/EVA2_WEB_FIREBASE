@@ -98,10 +98,9 @@ section{
 	background-position: center;
 	background-size: cover;
 }
-.feature_one{background-image: url();}
-.feature_two{background-image: url();}
-.feature_three{background-image: url();}
-.feature_four{background-image: url();}
+.feature_one{background-image: url("https://firebasestorage.googleapis.com/v0/b/eva2-2e24e.appspot.com/o/img-principal2.jpg?alt=media&token=6bb52c1b-5b9c-4937-9947-10dc9dd08e1b");}
+.feature_two{background-image: url("https://firebasestorage.googleapis.com/v0/b/eva2-2e24e.appspot.com/o/img-principal3.jpg?alt=media&token=35df6ced-2f78-4295-b376-9fb4ff260a60");}
+.feature_three{background-image: url("https://firebasestorage.googleapis.com/v0/b/eva2-2e24e.appspot.com/o/img-principal4.jpg?alt=media&token=74989fdf-ddba-4a88-987e-c20e7462caff");}
 
 
 
