@@ -1,11 +1,27 @@
 firebase.initializeApp({
-    apiKey: "AIzaSyBTGMQXY1qvq9Cj9i2cZdJBB0Iju8fQG6Q",
-    authDomain: "eva2-e3377.firebaseapp.com",
-    projectId: 'eva2-e3377'
+    apiKey: 'AIzaSyA7syp6Hye-lEH_tkeYlqQJ0-075umw0jg',
+    authDomain: 'eva2-2e24e.firebaseapp.com',
+    projectId: 'eva2-2e24e'
 });
 
 // Initialize Cloud Firestore through Firebase
 var db = firebase.firestore();
+
+function eliminarDatos() {
+
+    var id = document.getElementById("id").value;
+
+    if (id == "") {
+        alert("Llene todos los campos por favor.");
+    } else {
+        db.collection("libros").doc(id).delete().then(function () {
+            alert("Datos eliminados con éxito.");
+        }).catch(function (error) {
+            alert("Error al eliminar datos.");
+            console.log(error);
+        })
+    }
+}
 
 function enviarDatos() {
 
@@ -30,10 +46,9 @@ function enviarDatos() {
             tematica: tematica_libro,
             correo_user: correo_libro
 
+        }).then(function (docRef) {
+            alert("Datos enviados con exito, intentaremos tener el libro que deseas lo mas pronto posible!!!");
         })
-            .then(function (docRef) {
-                alert("Datos enviados con exito, intentaremos tener el libro que deseas lo mas pronto posible!!!");
-            })
             .catch(function (error) {
                 alert("Error al enviar datos !!!");
             });

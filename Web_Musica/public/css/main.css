@@ -45,10 +45,7 @@ section{
    Author's custom styles
 ========================================================================== */
 #wrapper{
-	width: 100%;
-	max-width: 1600px;
-	height: auto;
-	margin: 0 auto;
+	height: 100%;
 	position: relative;
 	overflow: hidden;
 }
@@ -101,10 +98,10 @@ section{
 	background-position: center;
 	background-size: cover;
 }
-.feature_one{background-image: url(https://firebasestorage.googleapis.com/v0/b/eva2-e3377.appspot.com/o/libro-bloque1.jpg?alt=media&token=ba186bec-4d9a-4dc5-9481-1ae995712b2f);}
-.feature_two{background-image: url(https://firebasestorage.googleapis.com/v0/b/eva2-e3377.appspot.com/o/libro-bloque2.jpg?alt=media&token=11160d0b-8b7b-4e2b-b281-2eb12543beee);}
-.feature_three{background-image: url(https://firebasestorage.googleapis.com/v0/b/eva2-e3377.appspot.com/o/libro-blque3.jpg?alt=media&token=4f6837bb-10e3-4ef9-9a46-f8cb37e09dad);}
-.feature_four{background-image: url(https://firebasestorage.googleapis.com/v0/b/eva2-e3377.appspot.com/o/aNUEL-AA.jpg?alt=media&token=d114ef70-d22b-412a-829d-1c9d1384bf1a);}
+.feature_one{background-image: url();}
+.feature_two{background-image: url();}
+.feature_three{background-image: url();}
+.feature_four{background-image: url();}
 
 
 
