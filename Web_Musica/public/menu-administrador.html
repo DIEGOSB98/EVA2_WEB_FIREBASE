@@ -26,7 +26,6 @@
     <!-- Normalize Css -->
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="js/script1.js"></script>
 </head>
 
 <body>
@@ -56,18 +55,80 @@
         <li><a href="login-administrador.html">Administrador</a></li>
     </ul>
 
+    <section style="margin: 0 auto; width:800px">
 
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input placeholder="Harry Potter" id="nom_lib" type="text" class="validate" required>
+                        <label for="nom_libro">Nombre Libro</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input placeholder="Lovcraft" id="autor" type="text" class="validate" required>
+                        <label for="autor">Autor</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input placeholder="1997" id="año" type="text" class="validate" required>
+                        <label for="año">Año</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input placeholder="Los Ravanos" id="editorial" type="text" class="validate" required>
+                        <label for="editorial">Editorial</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea required id="tematica" class="materialize-textarea"></textarea>
+                        <label for="textarea1">Explicanos la temática del libro</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="email" type="text" class="validate">
+                        <label for="email">Su correo electronico</label>
+                    </div>
+                </div>
 
-    <div style=" margin: 0 auto; width: 500px; height: 500px; padding: 10px">
-
-        <div class="row" style="margin: 0 auto; width:210px;">
-            <div class="input-field col s6" style="margin: 0 auto; width: 200px; text-align: center">
-                <input id="id" type="text" class="validate">
-                <label class="active" for="Id">Ingrese ID</label>
-                <button type="button" class="waves-effect waves-light btn" onclick="eliminarDatos()" required>Eliminar</button>
-            </div>
+                <div>
+                    <button id="boton" type="button" class="waves-effect waves-light btn" onclick="modificarDatos()">Modificar</button>
+                </div>
+            </form>
         </div>
 
+    </section>
+
+    <div style="margin: 0 auto; width:1000px; padding: 76px">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre Libro</th>
+                    <th>Tematica</th>
+                    <th>Escritor</th>
+                    <th>Editorial</th>
+                    <th>Año</th>
+                    <th>Correo Usuario</th>
+                    <th>Listar</th>
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
+
+            <tbody id="tabla">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
 
@@ -131,6 +192,10 @@
         <small>© 2019 | <a class="copyright_link" href="www.ipchile.cl" target="_blank">IPCHILE</a> | by Diego
             Beñaldo</small>
     </div>
+    <script src="js/script1.js">
+
+
+    </script>
 
 </body>
 
