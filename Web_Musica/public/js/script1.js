@@ -81,8 +81,6 @@ function modificarDatos(id, nom_libro, autor_libro, año_libro, editorial_libro,
             });
     }
 
-
-
 }
 function eliminarDatos(id) {
 
@@ -112,9 +110,9 @@ db.collection("libros").onSnapshot((querySnapshot) => {
         <td>${doc.data().año}</td>
         <td>${doc.data().correo_user}</td>
         <td><button style='width:85px' type="button" class="waves-effect waves-light 
-        btn" onclick="modificarDatos('${doc.id}','${doc.data().nom_libro}','${doc.data().escritor}','${doc.data().año}','${doc.data().editorial}','${doc.data().tematica}','${doc.data().correo_user}')">Mod</button></td>
+        btn" onclick="modificarDatos('${doc.id}','${doc.data().nom_libro}','${doc.data().escritor}','${doc.data().año}','${doc.data().editorial}','${doc.data().tematica}','${doc.data().correo_user}')">Lis</button></td>
         <td><button style='width:85px' type="button" class="waves-effect waves-light 
-        btn" onclick="eliminarDatos('${doc.id}')">Lis</button></td>
+        btn" onclick="eliminarDatos('${doc.id}')">Eli</button></td>
         </tr>`;
 
     });
